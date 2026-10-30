@@ -29,11 +29,11 @@ int main() {
 
     MathType mathType = MT_ADD; // sets MathType to a one
 
-    vector<vector<int>>myVector;
+    vector<vector<int>>questions;
 
     string userInput = "?";
-    double userAnswer; // The user's answer to the math question
-    double correctAns; // The correct answer\
+    int userAnswer; // The user's answer to the math question
+    int correctAns; // The correct answer\
 
     int rightNum = 0; // the 2nd random number between 1 and level change
     int leftNum = 0; // the 1st random number between 1 and level change
@@ -140,7 +140,8 @@ int main() {
                 cout << "Please report this error to Brayden Tolle or Joe Bracht" << endl;
                 return -1;
         } //End of the switch
-        vector <int> Row = {mathLevel, leftNum, mathSymbol, rightNum, correctAns};
+
+        vector<int>row = {mathLevel, leftNum, mathSymbol, rightNum, correctAns};
 
         // Start of for loop
         for (int attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
