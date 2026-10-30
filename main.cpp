@@ -15,6 +15,7 @@ and then it outputs an end of program message.
 #include <limits> // for the use of numeric_limits
 #include <cctype> // Checks numbers and characters
 #include <iomanip> // Adds for width issues for our box (We asked jesse how to)
+#include <vector> // holds data
 
 using namespace std; //sets standard namespace
 //initializing variables
@@ -27,6 +28,8 @@ int main() {
     enum MathType { MT_ADD = 1, MT_SUB = 2, MT_MUL = 3, MT_DIV = 4 }; // Our Enum for all the problems
 
     MathType mathType = MT_ADD; // sets MathType to a one
+
+    vector<vector<int>>myVector;
 
     string userInput = "?";
     double userAnswer; // The user's answer to the math question
@@ -137,6 +140,7 @@ int main() {
                 cout << "Please report this error to Brayden Tolle or Joe Bracht" << endl;
                 return -1;
         } //End of the switch
+        vector <int> Row = {mathLevel, leftNum, mathSymbol, rightNum, correctAns};
 
         // Start of for loop
         for (int attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
