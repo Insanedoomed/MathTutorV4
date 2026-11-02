@@ -137,7 +137,7 @@ int main() {
             default: //error handling - should never happen
                 cout << "Invalid question type: " << mathType << endl;
                 cout << "Program ended with an error -1" << endl;
-                cout << "Please report this error to Brayden Tolle or Joe Bracht" << endl;
+                cout << "Please report this error to Brayden Tolle or Barnabas Htoo" << endl;
                 return -1;
         } //End of the switch
 
@@ -169,6 +169,7 @@ int main() {
                 cout << "Good job! You Got The Question Right!" << endl;
                 cout << endl;
                 totalCorrect++;
+                row.push_back(attempt);
                 break;
             } else {
                 totalIncorrect++;
@@ -184,6 +185,7 @@ int main() {
                     cout << " | CorrectAnswer: " << left << setw(18) << correctAns << "|" << endl;
                     cout << " |----------------------------------|" << endl;
                     cout << endl;
+                    row.push_back(0);
                 }
             }
         } // End of For
@@ -232,7 +234,7 @@ int main() {
 
         while (true) {
             // asks the user if they want another question
-            cout << "Would you like a other question Apprentice? (y=yes/n=no" << endl;
+            cout << "Would you like a other question Apprentice? (y=yes/n=no)" << endl;
             getline(cin, userInput);
 
             for (int i = 0; i < userInput.length(); i++) {
