@@ -251,9 +251,9 @@ int main() {
         }
     } while (userInput == "y" || userInput == "yes"); // User's answer to the yes or no
 
-    cout << "=========================================================" << endl;
-    cout << "Math Tutor Summary Report" << endl;
-    cout << "=========================================================" << endl;
+    cout << "=======================================" << endl;
+    cout << "    Math Tutor Summary Report" << endl;
+    cout << "=======================================" << endl;
     cout << endl;
     cout << "Levels: " << "   " << "Questions" << "       " << "Attempts" << endl;
     cout << "______  _______________   __________" << endl;
@@ -279,7 +279,7 @@ int main() {
                 << setw(7) << left << correctAns << " ";
 
         if (attempt != 0) {
-            cout << attempt << " " << endl;
+            cout << "    " << attempt << endl;
             totalCorrect++;
         }
         else {
@@ -289,16 +289,16 @@ int main() {
 
     }
     cout << endl;
-    cout << "====================================";
+    cout << "=======================================";
     cout << endl;
 
-    totalQuestions = questions.size() ;
+    totalQuestions = questions.size();
     average = (totalCorrect * 100) / totalQuestions;
 
-    cout << "Total Questions: " << totalQuestions << endl;
-    cout << "Total Correct: " << totalCorrect << endl;
-    cout << "Total Incorrect: " << totalIncorrect << endl;
-    cout << "Average Correct: " << average << "%" << endl;
+    cout << "Total Questions : " << setw(3) << left << totalQuestions << endl;
+    cout << "Total Correct   : " << setw(3) << left << totalCorrect << endl;
+    cout << "Total Incorrect : " << setw(3) << left << totalIncorrect << endl;
+    cout << "Average Correct : " << setw(3) << left << average << "%" << endl;
     cout << endl;
     cout << "Keep Calm and do math!" << endl;
 
