@@ -144,11 +144,11 @@ int main() {
         vector<int>row = {mathLevel, leftNum, mathSymbol, rightNum, correctAns};
 
         // Start of for loop
-        for (int attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        for (int i = 1; i <= MAX_ATTEMPTS; i++) {
             // If attempt is less than or equal to MAX_ATTEMPTS, it will add one attempt
             cout << " |----------------------------------|" << endl;
             cout << " | Question: " << left << setw(23) << questionNumber << "|" << endl;
-            cout << " | Attempts: " << attempt << " out of " << left << setw(14) << MAX_ATTEMPTS << "|" << endl;;
+            cout << " | Attempts: " << i << " out of " << left << setw(14) << MAX_ATTEMPTS << "|" << endl;;
             cout << " | MathLevel: " << left << setw(22) << mathLevel << "|" << endl;
             cout << " |----------------------------------|" << endl;
             cout << endl;
@@ -189,6 +189,7 @@ int main() {
                 }
             }
         } // End of For
+        questions.push_back(row);
 
         // Leveling up
         if (totalCorrect >= 3) {
@@ -265,8 +266,19 @@ int main() {
         rightNum= questions.at(i).at(3);
         correctAns= questions.at(i).at(4);
         attempt= questions.at(i).at(5);
+    }
 
-    cout << "This is MathTutorV3, thanks for playing!" << endl;
+    cout << " " << setw(2) << right << mathLevel << " "
+                << setw(3) << right << leftNum << " "
+                << mathSymbol << " "
+                << setw(4) << right << rightNum << " "
+                << setw(5) << right << correctAns << " "
+                << setw(6) << right << attempt << " ";
+    cout << endl;
+    cout << "====================================" ;
+    cout << endl;
+
+    cout << "This is MathTutorV4, thanks for playing!" << endl;
     cout << "Thank you this is all for now!" << endl;
 
     return 0;
