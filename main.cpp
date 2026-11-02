@@ -48,6 +48,8 @@ int main() {
     int totalIncorrect = 0; // Current number of incorrect questions; used later for leveling down
     int totalCorrect = 0; // Current number of Correct questions; used for later for leveling up
 
+    int average = 0;
+    int totalQuestions = 0;
     string userName; // User's name
 
     //Display the program's header
@@ -289,6 +291,16 @@ int main() {
     cout << endl;
     cout << "====================================";
     cout << endl;
+
+    totalQuestions = questions.size() ;
+    average = (totalCorrect * 100) / totalQuestions;
+
+    cout << "Total Questions: " << totalQuestions << endl;
+    cout << "Total Correct: " << totalCorrect << endl;
+    cout << "Total Incorrect: " << totalIncorrect << endl;
+    cout << "Average Correct: " << average << "%" << endl;
+    cout << endl;
+    cout << "Keep Calm and do math!" << endl;
 
     cout << "This is MathTutorV4, thanks for playing!" << endl;
     cout << "Thank you this is all for now!" << endl;
