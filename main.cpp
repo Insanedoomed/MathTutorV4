@@ -253,7 +253,7 @@ int main() {
     cout << "Math Tutor Summary Report" << endl;
     cout << "=========================================================" << endl;
     cout << endl;
-    cout << "Levels: " << "   " << "Questions" << "   " << "Attempts" << endl;
+    cout << "Levels: " << "   " << "Questions" << "       " << "Attempts" << endl;
 
     totalCorrect = 0;
     totalIncorrect = 0;
@@ -269,11 +269,11 @@ int main() {
         attempt = questions.at(i).at(5);
 
 
-        cout << " " << setw(9) << right << mathLevel << " "
-                << setw(2) << right << rightNum << " "
+        cout << " " << setw(2) << right << mathLevel << " "
+                << setw(8) << right << leftNum << " "
                 << mathSymbol << " "
-                << setw(2) << right << leftNum << " "
-                << setw(2) << right << correctAns << " ";
+                << setw(2) << left << rightNum << " = "
+                << setw(7) << left << correctAns << " ";
 
         if (attempt != 0) {
             cout << attempt << " " << endl;
