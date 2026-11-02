@@ -169,7 +169,7 @@ int main() {
                 cout << "Good job! You Got The Question Right!" << endl;
                 cout << endl;
                 totalCorrect++;
-                row.push_back(attempt);
+                row.push_back(i);
                 break;
             } else {
                 totalIncorrect++;
@@ -248,6 +248,23 @@ int main() {
             cout << "Please enter y, yes, n, no" << endl;
         }
     } while (userInput == "y" || userInput == "yes"); // User's answer to the yes or no
+
+    cout << "=========================================================" << endl;
+    cout << "Math Tutor Summary Report" << endl;
+    cout << "=========================================================" << endl;
+    cout << endl;
+    cout << "Levels: " << "   " << "Questions" << "   " << "Attempts" << endl;
+
+    totalCorrect = 0;
+    totalIncorrect = 0;
+
+    for (int i = 0; i < questions.size(); i++) {
+        mathLevel= questions.at(i).at(0);
+        leftNum= questions.at(i).at(1);
+        mathSymbol= static_cast<char> (questions.at(i).at(2));
+        rightNum= questions.at(i).at(3);
+        correctAns= questions.at(i).at(4);
+        attempt= questions.at(i).at(5);
 
     cout << "This is MathTutorV3, thanks for playing!" << endl;
     cout << "Thank you this is all for now!" << endl;
