@@ -173,7 +173,7 @@ int main() {
                 break;
             } else {
                 totalIncorrect++;
-                if (attempt < MAX_ATTEMPTS) {
+                if (i < MAX_ATTEMPTS) {
                     // IF wrong, your number of attempts goes up
                     cout << "Not quite, apprentice!" << endl;
                     cout << endl;
@@ -260,20 +260,23 @@ int main() {
     totalIncorrect = 0;
 
     for (int i = 0; i < questions.size(); i++) {
-        mathLevel= questions.at(i).at(0);
-        leftNum= questions.at(i).at(1);
-        mathSymbol= static_cast<char> (questions.at(i).at(2));
-        rightNum= questions.at(i).at(3);
-        correctAns= questions.at(i).at(4);
-        attempt= questions.at(i).at(5);
+        mathLevel = questions.at(i).at(0);
+        leftNum = questions.at(i).at(1);
+        mathSymbol = static_cast<char> (questions.at(i).at(2));
+        rightNum = questions.at(i).at(3);
+        correctAns = questions.at(i).at(4);
+        attempt = questions.at(i).at(5);
+
+
+        cout << " " << setw(2) << right << mathLevel << " "
+                    << setw(3) << right << leftNum << " "
+                    << mathSymbol << " "
+                    << setw(4) << right << rightNum << " "
+                    << setw(5) << right << correctAns << " "
+                    << setw(6) << right << attempt << " ";
     }
 
-    cout << " " << setw(2) << right << mathLevel << " "
-                << setw(3) << right << leftNum << " "
-                << mathSymbol << " "
-                << setw(4) << right << rightNum << " "
-                << setw(5) << right << correctAns << " "
-                << setw(6) << right << attempt << " ";
+
     cout << endl;
     cout << "====================================" ;
     cout << endl;
