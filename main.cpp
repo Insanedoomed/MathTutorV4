@@ -254,6 +254,7 @@ int main() {
     cout << "=========================================================" << endl;
     cout << endl;
     cout << "Levels: " << "   " << "Questions" << "       " << "Attempts" << endl;
+    cout << "______  _______________   __________" << endl;
 
     totalCorrect = 0;
     totalIncorrect = 0;
