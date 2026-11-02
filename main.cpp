@@ -29,7 +29,7 @@ int main() {
 
     MathType mathType = MT_ADD; // sets MathType to a one
 
-    vector<vector<int>>questions;
+    vector<vector<int> > questions;
 
     string userInput = "?";
     int userAnswer; // The user's answer to the math question
@@ -103,7 +103,6 @@ int main() {
         leftNum = ((rand() % LevelRange) + 1); // Value from 1-whatever level the user is
 
 
-
         //Switch to calculate the correct answer and which math operator to display
         switch (mathType) {
             case MT_ADD: // addition
@@ -141,7 +140,7 @@ int main() {
                 return -1;
         } //End of the switch
 
-        vector<int>row = {mathLevel, leftNum, mathSymbol, rightNum, correctAns};
+        vector<int> row = {mathLevel, leftNum, mathSymbol, rightNum, correctAns};
 
         // Start of for loop
         for (int i = 1; i <= MAX_ATTEMPTS; i++) {
@@ -259,26 +258,35 @@ int main() {
     totalCorrect = 0;
     totalIncorrect = 0;
 
+
+
     for (int i = 0; i < questions.size(); i++) {
         mathLevel = questions.at(i).at(0);
         leftNum = questions.at(i).at(1);
-        mathSymbol = static_cast<char> (questions.at(i).at(2));
+        mathSymbol = static_cast<char>(questions.at(i).at(2));
         rightNum = questions.at(i).at(3);
         correctAns = questions.at(i).at(4);
         attempt = questions.at(i).at(5);
 
 
-        cout << " " << setw(2) << right << mathLevel << " "
-                    << setw(3) << right << leftNum << " "
-                    << mathSymbol << " "
-                    << setw(4) << right << rightNum << " "
-                    << setw(5) << right << correctAns << " "
-                    << setw(6) << right << attempt << " ";
+        cout << " " << setw(9) << right << mathLevel << " "
+                << setw(2) << right << rightNum << " "
+                << mathSymbol << " "
+                << setw(2) << right << leftNum << " "
+                << setw(2) << right << correctAns << " ";
+
+        if (attempt != 0) {
+            cout << attempt << " " << endl;
+            totalCorrect++;
+        }
+        else {
+            cout << "Incorrect" << endl;
+            totalIncorrect++;
+        }
+
     }
-
-
     cout << endl;
-    cout << "====================================" ;
+    cout << "====================================";
     cout << endl;
 
     cout << "This is MathTutorV4, thanks for playing!" << endl;
