@@ -16,6 +16,7 @@ and then it outputs an end of program message.
 #include <cctype> // Checks numbers and characters
 #include <iomanip> // Adds for width issues for our box (We asked jesse how to)
 #include <vector> // holds data
+#include <sstream> // ostringstream
 
 using namespace std; //sets standard namespace
 
@@ -39,7 +40,7 @@ int main() {
 
 
     int userAnswer; // The user's answer to the math question
-    int correctAns; // The correct answer\
+    int correctAns; // The correct answer
 
     int rightNum = 0; // the 2nd random number between 1 and level change
     int leftNum = 0; // the 1st random number between 1 and level change
@@ -65,7 +66,7 @@ int main() {
     cout <<
             "(*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*](*)[*]{*}[*]"
             << endl;
-    cout << "                       {*} Welcome to the tower of the wizard of magical math tutoring! (V3) {*}" << endl;
+    cout << "                       {*} Welcome to the tower of the wizard of magical math tutoring! (V4) {*}" << endl;
     cout << R"(
 ,---.    ,---.   ____   ,---------. .---.  .---.    .--.      .--..-./`)  ____..--'   ____    .-------.     ______
 |    \  /    | .'  __ `.\          \|   |  |_ _|    |  |_     |  |\ .-.')|        | .'  __ `. |  _ _   \   |    _ `''.
@@ -213,7 +214,7 @@ int main() {
 
             cout << "You have Advanced to the next level" << endl;
             cout << " |----------------------------------|" << endl;
-            cout << " | NumUp: " << left << setw(26) << LevelRange << "|" << endl;;
+            cout << " | NumUp: " << left << setw(26) << LevelRange << "|" << endl;
             cout << " | LevelUp: " << left << setw(24) << mathLevel << "|" << endl;
             cout << " |----------------------------------|" << endl;
             cout << endl;
@@ -231,7 +232,7 @@ int main() {
 
                 cout << "You have Advanced down a level" << endl;
                 cout << " |----------------------------------|" << endl;
-                cout << " | NumDown: " << left << setw(24) << LevelRange << "|" << endl;;
+                cout << " | NumDown: " << left << setw(24) << LevelRange << "|" << endl;
                 cout << " | LevelDown: " << left << setw(22) << mathLevel << "|" << endl;
                 cout << " |----------------------------------|" << endl;
                 cout << endl;
@@ -245,7 +246,7 @@ int main() {
 
         while (true) {
             // asks the user if they want another question
-            cout << "Would you like a other question Apprentice? (y=yes/n=no)" << endl;
+            cout << "Would you like another question, Apprentice? (y=yes/n=no)" << endl;
             getline(cin, userInput);
 
             for (int i = 0; i < userInput.length(); i++) {
@@ -260,7 +261,6 @@ int main() {
         }
     } while (userInput == "y" || userInput == "yes"); // User's answer to the yes or no
     // ---------- Summary box ----------
-
 
     boxLine("    Math Tutor Summary Report", BOX_INNER);
     cout << border << endl;
