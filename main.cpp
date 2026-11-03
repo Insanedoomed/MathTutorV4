@@ -18,20 +18,26 @@ and then it outputs an end of program message.
 #include <vector> // holds data
 
 using namespace std; //sets standard namespace
-//initializing variables
-//start of the main function; Joe is handling the variable documentation from Brayden's computer
+
+void boxLine(const string &text, int width) {
+    cout << " | " << left << setw(width - 2) << text << " |" << endl;
+} // void = returns nothing, it only prints
+
+//start of the main function
 int main() {
+    //initializing variables
     srand(time(0)); // Seed first; used to randomize the numeric operator (+,-,*,/)
     const int MAX_ATTEMPTS = 3; // Our max attempts; stays the same throughout program
     const int LEVEL_RANGE = 10; // Starting range of 1-10; adds ten each level up
+    const int BOX_INNER = 40; // number of characters between the two | borders
 
     enum MathType { MT_ADD = 1, MT_SUB = 2, MT_MUL = 3, MT_DIV = 4 }; // Our Enum for all the problems
 
     MathType mathType = MT_ADD; // sets MathType to a one
 
-    vector<vector<int> > questions;
+    vector<vector<int> > questions; // Vector for our tabel. Sets questions as a holder
 
-    string userInput = "?";
+
     int userAnswer; // The user's answer to the math question
     int correctAns; // The correct answer\
 
@@ -48,9 +54,12 @@ int main() {
     int totalIncorrect = 0; // Current number of incorrect questions; used later for leveling down
     int totalCorrect = 0; // Current number of Correct questions; used for later for leveling up
 
-    int average = 0;
-    int totalQuestions = 0;
+    int average = 0; // Out average which is Totalcorrect dived by how many questions there were
+    int totalQuestions = 0; // Totalquestions answered
+
+    string border = " |" + string(BOX_INNER, '-') + "|"; // builds the box's top/bottom line: " |" + 40 dashes + "|"
     string userName; // User's name
+    string userInput = "?"; //User input
 
     //Display the program's header
     cout <<
@@ -250,20 +259,21 @@ int main() {
             cout << "Please enter y, yes, n, no" << endl;
         }
     } while (userInput == "y" || userInput == "yes"); // User's answer to the yes or no
+    // ---------- Summary box ----------
 
-    cout << "=======================================" << endl;
-    cout << "    Math Tutor Summary Report" << endl;
-    cout << "=======================================" << endl;
-    cout << endl;
-    cout << "Levels: " << "   " << "Questions" << "       " << "Attempts" << endl;
-    cout << "______  _______________   __________" << endl;
+
+    boxLine("    Math Tutor Summary Report", BOX_INNER);
+    cout << border << endl;
+    boxLine("", BOX_INNER);
+    boxLine("Levels:    Questions       Attempts", BOX_INNER);
+    boxLine("______  _______________   __________", BOX_INNER);
 
     totalCorrect = 0;
     totalIncorrect = 0;
 
-
-
+    //
     for (int i = 0; i < questions.size(); i++) {
+        // For each saved question: rebuild its table row, count it right/wrong, and print it inside the box
         mathLevel = questions.at(i).at(0);
         leftNum = questions.at(i).at(1);
         mathSymbol = static_cast<char>(questions.at(i).at(2));
@@ -271,36 +281,44 @@ int main() {
         correctAns = questions.at(i).at(4);
         attempt = questions.at(i).at(5);
 
-
-        cout << " " << setw(2) << right << mathLevel << " "
+        ostringstream row; // builds the row as text so the box can pad it
+        row << " " << setw(2) << right << mathLevel << " "
                 << setw(8) << right << leftNum << " "
                 << mathSymbol << " "
                 << setw(2) << left << rightNum << " = "
                 << setw(7) << left << correctAns << " ";
 
         if (attempt != 0) {
-            cout << "    " << attempt << endl;
+            row << "    " << attempt;
             totalCorrect++;
-        }
-        else {
-            cout << "Incorrect" << endl;
+        } else {
+            row << "Incorrect";
             totalIncorrect++;
         }
-
+        boxLine(row.str(), BOX_INNER); // read: pass the built-up text to boxLine
     }
-    cout << endl;
-    cout << "=======================================";
-    cout << endl;
+    // Calculates the final stats and prints them in a second section of the box, followed by the goodbye messages
+    totalQuestions = questions.size(); // total questions asked = number of rows saved in the vector
+    average = (totalCorrect * 100) / totalQuestions; // percent correct (integer math, so it rounds down)
 
-    totalQuestions = questions.size();
-    average = (totalCorrect * 100) / totalQuestions;
+    cout << border << endl; // line separating the table from the totals
 
-    cout << "Total Questions : " << setw(3) << left << totalQuestions << endl;
-    cout << "Total Correct   : " << setw(3) << left << totalCorrect << endl;
-    cout << "Total Incorrect : " << setw(3) << left << totalIncorrect << endl;
-    cout << "Average Correct : " << setw(3) << left << average << "%" << endl;
+    ostringstream line; // reusable stream for building each totals row as text
+    line << "Total Questions : " << totalQuestions;
+    boxLine(line.str(), BOX_INNER); // print the row inside the box
+    line.str(""); // clear the stream so the next row starts fresh
+    line << "Total Correct   : " << totalCorrect;
+    boxLine(line.str(), BOX_INNER);
+    line.str("");
+    line << "Total Incorrect : " << totalIncorrect;
+    boxLine(line.str(), BOX_INNER);
+    line.str("");
+    line << "Average Correct : " << average << "%";
+    boxLine(line.str(), BOX_INNER);
+
+    cout << border << endl; // bottom of the box
     cout << endl;
-    cout << "Keep Calm and do math!" << endl;
+    cout << "Keep Calm and do math!" << endl; // closing messages printed outside the box
 
     cout << "This is MathTutorV4, thanks for playing!" << endl;
     cout << "Thank you this is all for now!" << endl;
