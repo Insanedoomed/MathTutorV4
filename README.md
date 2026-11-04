@@ -14,6 +14,7 @@
   - [Leveling up](#leveling-up)
   - [Leveling down, and show the correct answer](#leveling-down-and-show-the-correct-answer)
   - [Show the summary report if the user end the program](#show-the-summary-report-if-the-user-end-the-program)
+  - [Show the Grade according to the correct score](#show-the-grade-according-to-the-correct-score)
 ## Summary
 Math Tutor V4 is an educational C++ program that presents users with a random math problem and
 checks their answer. The program interacts with users by asking for personal information, 
@@ -54,15 +55,24 @@ total questions, correct answer, incorrect answer, and percentage for correct an
 ![](/images/wrong-answer.png)
 
 ### Invalid Question
+![](/images/invalid-question.png)
 
 ### Displaying level, Questions, and Attempts left
+![](/images/displaying-lqa.png)
 
 ### Asking if user wants another question
+![](/images/ask-for-another-question.png)
 
 ### Leveling up
+![](/images/leveling-up.png)
 
 ### Leveling down, and show the correct answer
+![](/images/leveling-down.png)
 
 ### Show the summary report if the user end the program
+![](/images/summary.png)
+
+### Show the Grade according to the correct score
+![](/images/grade.png)
 
 [Back to Top](#math-tutor-vi)
