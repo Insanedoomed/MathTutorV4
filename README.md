@@ -1,3 +1,5 @@
+# Math Tutor VI
+
 <b>Table of Content</b>
 - [Summary](#summary)
 - [Features](#features)
@@ -46,27 +48,19 @@ total questions, correct answer, incorrect answer, and percentage for correct an
 
 ## Console Output Testing Example
 ### Right Answer
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.39.46.png"/>
 
 ### Wrong Answer
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.39.57.png"/>
 
 ### Invalid Question
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.40.14.png"/>
 
 ### Displaying level, Questions, and Attempts left
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.40.36.png"/>
 
 ### Asking if user wants another question
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.41.06.png"/>
 
 ### Leveling up
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.41.25.png"/>
 
 ### Leveling down, and show the correct answer
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.42.55.png"/>
 
 ### Show the summary report if the user end the program
-<img src="/Users/barnabasthadoehtoo/CLionProjects/MathTutorV4/images/Screenshot 2026-11-03 at 19.14.13.png"/>
 
-[Back to Top](#math-tutor-v1)
+[Back to Top](#math-tutor-vi)
