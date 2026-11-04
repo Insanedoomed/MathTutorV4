@@ -1,8 +1,8 @@
 <b>Table of Content</b>
 - [Summary](#summary)
+- [Features](#features)
 - [Maintainers](#maintainers)
 - [New Concepts Used](#new-concepts-used)
-- [Features](#features)
 - [Console Output Testing Example](#console-output-testing-example)
   - [Right Answer](#right-answer)
   - [Wrong Answer](#wrong-answer)
