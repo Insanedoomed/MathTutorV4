@@ -46,7 +46,7 @@ total questions, correct answer, incorrect answer, and percentage for correct an
 
 ## Console Output Testing Example
 ### Right Answer
-<img src="/Users/barnabasthadoehtoo/Desktop/Screenshot 2026-11-03 at 19.39.46.png"/>
+<img src="/Users/barnabasthadoehtoo/Library/CloudStorage/OneDrive-WayneStateCollege/CSC 150/Screenshot for MT IV/Screenshot 2026-11-03 at 19.39.46.png"/>
 
 ### Wrong Answer
 <img src="/Users/barnabasthadoehtoo/Desktop/Screenshot 2026-11-03 at 19.39.57.png"/>
