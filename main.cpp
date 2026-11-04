@@ -8,15 +8,15 @@ Description: A wizard/magic themed math tutor that displays the intro featuring
 ASCII art and jokes, it then asks a simple math question which is checked for correctness
 and then it outputs an end of program message.
 ****************************************************************************************************************************************************/
-#include <iostream> //required for cout and cin
-#include <cstdlib> // for srand and rand
-#include <string> // for string data types
-#include <ctime> // for time seeding
-#include <limits> // for the use of numeric_limits
 #include <cctype> // Checks numbers and characters
+#include <cstdlib> // for srand and rand
+#include <ctime> // for time seeding
 #include <iomanip> // Adds for width issues for our box (We asked jesse how to)
-#include <vector> // holds data
+#include <iostream> //required for cout and cin
+#include <limits> // for the use of numeric_limits
 #include <sstream> // ostringstream
+#include <string> // for string data types
+#include <vector> // holds data
 
 using namespace std; //sets standard namespace
 
