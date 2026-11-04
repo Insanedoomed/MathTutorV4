@@ -20,14 +20,13 @@ This is a math tutoring program themed around wizards/magic.
 
 ## Maintainers
 [@Insanedoomed](https://github.com/Insanedoomed) Brayden Tolle  
-[@JoeBracht](https://github.com/JoeBracht) Joe Bracht
+[@BarnabasHtoo](https://github.com/BarnabasHtoo) Saw Barnabas Thadoe Htoo
 
 ## New Concepts Used
-- Do/While/For Loops.
-- Error handling
-- User friendly system
-- Leveling up/down
-- enums for mathType
+- Using 2D Vector to produce the summary report at the end.
+- Using single dimension vector to store data.
+- Use push_back.
+- using #iomanip and setw for align right and left for summary table. 
 
 ## Console Output Testing Example
 ```
