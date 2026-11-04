@@ -1,6 +1,8 @@
 # Brayden Tolle
 Joe Bracht
 <hr>
-Peer review: Joe was a fun person to work with. He did good on what he needed to do and after explaining the code he
-got it very well. I would work with him again. We had good communiction and told eachother when soemthing was done.
+Peer review: Barnabas Htoo
 <hr>
+I really loved working with Barnabas. He communicated very very well and we talked during the code and he explained
+on what he did and gave a good example. especially during the left and the right with setw. There was no bad with
+working with him. The good is that he was very fun to work with and made it easy and he understood things very well.
