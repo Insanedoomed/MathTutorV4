@@ -48,8 +48,10 @@ total questions, correct answer, incorrect answer, and percentage for correct an
 
 ## Console Output Testing Example
 ### Right Answer
+![](/images/right-answer.png)
 
 ### Wrong Answer
+![](/images/wrong-answer.png)
 
 ### Invalid Question
 
