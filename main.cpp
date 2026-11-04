@@ -318,6 +318,50 @@ int main() {
 
     cout << border << endl; // bottom of the box
     cout << endl;
+
+    if (average >= 95) {
+        cout << border << endl;
+        boxLine("Fantastic apprentice Grade:A+", BOX_INNER);
+        cout << border << endl;
+        cout << endl;
+    } else if (average >= 90) {
+        cout << border << endl;
+        boxLine("Way to go apprentice! Grade:A", BOX_INNER);
+        cout << border << endl;
+    } else if (average >= 85) {
+        cout << border << endl;
+        boxLine("Nice apprentice! Way to work through Grade:B+", BOX_INNER);
+        cout << border << endl;
+    } else if (average >= 80) {
+        cout << border << endl;
+        boxLine("   Good Job apprentice Grade:B!", BOX_INNER);
+        cout << border << endl;
+    } else if (average >= 75) {
+        cout << border << endl;
+        boxLine("Nice work apprentice! Grade:C+", BOX_INNER);
+        cout << border << endl;
+    } else if (average >= 70) {
+        cout << border << endl;
+        boxLine("Way to power through! Grade:C", BOX_INNER);
+        cout << border << endl;
+    } else if (average >= 65) {
+        cout << border << endl;
+        boxLine("Great job apprentice! Grade:D+", BOX_INNER);
+        cout << border << endl;
+    } else if (average >= 60) {
+        cout << border << endl;
+        boxLine("Good Work apprentice! Grade:D", BOX_INNER);
+        cout << border << endl;
+    } else if (average >= 55) {
+        cout << border << endl;
+        boxLine("Could be worse apprentice. Grade: F+", BOX_INNER);
+        cout << border << endl;
+    } else if (average <= 50) {
+        cout << border << endl;
+        boxLine("There is work to be done! Grade: F", BOX_INNER);
+        cout << border << endl;
+    }
+
     cout << "Keep Calm and do math!" << endl; // closing messages printed outside the box
 
     cout << "This is MathTutorV4, thanks for playing!" << endl;
