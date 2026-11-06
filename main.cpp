@@ -152,6 +152,7 @@ int main() {
                 return -1;
         } //End of the switch
 
+        //Storing the math level, left number, math symbol, right number, and correct answer
         vector<int> row = {mathLevel, leftNum, mathSymbol, rightNum, correctAns};
 
         // Start of for loop
@@ -180,7 +181,7 @@ int main() {
                 cout << "Good job! You Got The Question Right!" << endl;
                 cout << endl;
                 totalCorrect++;
-                row.push_back(i);
+                row.push_back(i); //add the number of attempts to the end of the row using value i.
                 break;
             } else {
                 totalIncorrect++;
@@ -196,11 +197,11 @@ int main() {
                     cout << " | CorrectAnswer: " << left << setw(18) << correctAns << "|" << endl;
                     cout << " |----------------------------------|" << endl;
                     cout << endl;
-                    row.push_back(0);
+                    row.push_back(0); // an error value 0 when out of attempts
                 }
             }
         } // End of For
-        questions.push_back(row);
+        questions.push_back(row); // add the data of row to the end of the 2D vectors
 
         // Leveling up
         if (totalCorrect >= 3) {
@@ -319,6 +320,7 @@ int main() {
     cout << border << endl; // bottom of the box
     cout << endl;
 
+    // Setting the different range average number to show different output accordingly
     if (average >= 95) {
         cout << border << endl;
         boxLine("Fantastic apprentice Grade:A+", BOX_INNER);
